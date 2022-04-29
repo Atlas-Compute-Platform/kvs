@@ -1,5 +1,5 @@
 # Atlas Makefile
-imageName = atkvs
+imageName = thedevtop/atkvs:latest
 help:
 	@echo 'build: Build exectuable'
 	@echo 'clean: Remove exectuable'
