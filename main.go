@@ -7,7 +7,6 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"net/http"
 	"os"
 
@@ -16,26 +15,21 @@ import (
 
 var dataSet lib.Dict
 
-func usage() {
-	fmt.Fprintf(os.Stderr, "Atlas Key/Value Store %s\n", lib.VERS)
-	flag.PrintDefaults()
-	os.Exit(1)
-}
-
 func main() {
+	lib.SvcName = "Atlas Key/Value Store"
+	lib.SvcVers = "1.0"
+
 	var (
 		netAddr  = flag.String("p", lib.PORT, "Specify port")
 		initData = flag.String("i", "{}", "Specify initial data)")
 		err      error
 	)
-	flag.Usage = usage
+	flag.Usage = lib.Usage
 	flag.Parse()
 
 	if dataSet, err = lib.ImportDict([]byte(*initData)); err != nil {
-		lib.LogError(os.Stderr, "main.main", err)
-		os.Exit(1)
+		lib.LogFatal(os.Stderr, "main.main", err)
 	}
-
 	http.HandleFunc("/ping", lib.ApiPing)
 	http.HandleFunc("/reset", apiReset)
 	http.HandleFunc("/list", apiList)

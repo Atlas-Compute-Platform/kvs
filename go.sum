@@ -1,2 +1,4 @@
 github.com/Atlas-Compute-Platform/lib v0.0.0-20220409213318-f63ce38682f0 h1:JwKS9zD99kTWuOePyThTJdbTWwYrzS36LoOG3uY3E9w=
 github.com/Atlas-Compute-Platform/lib v0.0.0-20220409213318-f63ce38682f0/go.mod h1:SxZFX3YoIsvjJ0rkeQ4afFEbgyo1VaCRG2LlBFQs5xM=
+github.com/Atlas-Compute-Platform/lib v0.0.0-20220428054653-2ceb64a78906 h1:77OLzj9o48ZStlvVv0DdzffOBZMteN/fG+VO1OYB16M=
+github.com/Atlas-Compute-Platform/lib v0.0.0-20220428054653-2ceb64a78906/go.mod h1:SxZFX3YoIsvjJ0rkeQ4afFEbgyo1VaCRG2LlBFQs5xM=
